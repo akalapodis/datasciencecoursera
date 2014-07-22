@@ -20,7 +20,9 @@ complete <- function(directory, id = 1:332) {
         a <- read.csv(files[i])
         result <- rbind(result, c(i, sum(complete.cases(a))))
     }
+
     result <- data.frame(result)
     colnames(result) <- c("id", "nobs")
     result
 }
+
